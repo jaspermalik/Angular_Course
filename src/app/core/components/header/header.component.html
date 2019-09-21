@@ -10,6 +10,11 @@
       >Posts
     </a>
     <a
+      [routerLink]="[{ outlets: { popup: ['message'] } }]"
+      routerLinkActive="active"
+      >Message
+    </a>
+    <a
       routerLink="demo"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"

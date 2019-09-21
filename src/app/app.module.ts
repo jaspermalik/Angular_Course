@@ -6,10 +6,11 @@ import { PostModule } from './modules/post/post.module'
 import { UserModule } from './modules/user/user.module'
 import { HeaderComponent } from './core/components/header/header.component'
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component';
-import { DemoModule } from './modules/demo/demo.module'
+import { DemoModule } from './modules/demo/demo.module';
+import { MessageBoxComponent } from './core/components/message-box/message-box.component'
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, PageNotFoundComponent],
+  declarations: [AppComponent, HeaderComponent, PageNotFoundComponent, MessageBoxComponent],
   imports: [
     BrowserModule,
     PostModule,

@@ -3,9 +3,25 @@
     <a routerLink="">{{ title }}</a>
   </h1>
   <nav>
-    <a>Posts</a>
+    <a
+      routerLink="posts"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Posts
+    </a>
+    <a
+      [routerLink]="[{ outlets: { popup: ['message'] } }]"
+      routerLinkActive="active"
+      >Message
+    </a>
+    <a
+      routerLink="demo"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Demo
+    </a>
   </nav>
   <nav>
-    <a>Register</a>
+    <a routerLink="register" routerLinkActive="active">Register</a>
   </nav>
 </header>

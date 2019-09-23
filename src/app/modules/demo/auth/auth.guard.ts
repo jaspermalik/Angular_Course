@@ -4,7 +4,8 @@ import {
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
   UrlTree,
-  Router
+  Router,
+  CanActivateChild
 } from '@angular/router'
 import { Observable } from 'rxjs'
 import { AuthService } from './auth.service'
@@ -12,7 +13,7 @@ import { AuthService } from './auth.service'
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class AuthGuard implements CanActivate, CanActivateChild {
   constructor(private authService: AuthService, private router: Router) {}
   canActivate(
     next: ActivatedRouteSnapshot,
@@ -27,5 +28,17 @@ export class AuthGuard implements CanActivate {
       return true
     }
     this.router.navigate(['/demo/login'])
+  }
+  canActivateChild(
+    childRoute: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ):
+    | boolean
+    | UrlTree
+    | Observable<boolean | UrlTree>
+    | Promise<boolean | UrlTree> {
+    // throw new Error('Method not implemented.')
+    console.log('Auth guard canActivateChild')
+    return false
   }
 }

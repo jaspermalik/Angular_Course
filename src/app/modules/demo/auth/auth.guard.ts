@@ -39,6 +39,6 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     | Promise<boolean | UrlTree> {
     // throw new Error('Method not implemented.')
     console.log('Auth guard canActivateChild')
-    return false
+    return true
   }
 }

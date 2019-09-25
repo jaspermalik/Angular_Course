@@ -1,0 +1,15 @@
+
+</ninghao-angular/
+▸  e2e/
+▸  node_modules/
+▸  src/
+   angular.json
+   browserslist
+   karma.conf.js
+   package-lock.json
+   package.json
+   README.md
+   tsconfig.app.json
+   tsconfig.json
+   tsconfig.spec.json
+   tslint.json
